@@ -1,0 +1,14 @@
+th{
+    font-weight:  normal;
+    background: #ddd;
+}
+
+td,th{
+    border-spacing: 0px;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+tbody tr:nth-child(2n+1){
+    background: lightblue;
+}
