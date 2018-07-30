@@ -1,0 +1,89 @@
+body {
+  background-color: rgb(47, 54, 65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(21,27,32);
+  color: white;
+  font-size: 30px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  position: absolute;
+}
+
+.fa-check-square {
+  z-index: -1;
+}
+
+span {
+  display: inline-flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  width: 0;
+  color: transparent;
+}
+
+button:hover {
+  color: red;
+}
+
+button:hover + .delete {
+  flex-grow: 1;
+  width: 100px;
+  font-size: 20px;
+  transition: 2s;
+  color: white;
+  background-color: red;
+}
+
+button:focus {
+  color: red;
+}
+
+button:focus > .fa-check-square {
+  z-index: 100;
+}
+
+button:focus > .fa-trash-alt {
+  z-index: -100;
+}
+
+button:focus + .sure {
+  flex-grow: 1;
+  width: 100px;
+  font-size: 20px;
+  transition: 2s;
+  color: white;
+  background-color: green;
+}
+
+button:focus > .delete {
+  z-index: -100;
+}
+
+button:focus > .sure {
+  z-index: 100;
+}

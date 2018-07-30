@@ -1,0 +1,37 @@
+@media (orientation: landscape) {
+
+  body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: blue;
+  }
+}
+
+@media (orientation: portrait) {
+
+  body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: red;
+  }
+}
+
+body {
+  background-image: url(/images/);
+}
+
+/* 如果网站不是 Google 的显示蓝色背景 */
+
+a:not[href^="www.google.com"]::after {
+  background-color: aqua;
+  content: "";
+}
+
+a:not(:nth-child(odd)) {}
+a:nth-child(even) {}
