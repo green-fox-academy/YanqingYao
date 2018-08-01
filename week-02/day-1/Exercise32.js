@@ -1,7 +1,7 @@
 //32 - draw-diagonal
 'use strict';
 
-const lineCount = 6;
+const lineCount = 12;
 
 
 // Write a program that draws a
