@@ -24,4 +24,6 @@ const ingredients = [
   { name: 'lime juice', inStock: 0, needsCooling: true },
   { name: 'soda', inStock: 0, needsCooling: true },
 ];
+
+
 console.table(ingredients);
