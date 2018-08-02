@@ -10,10 +10,10 @@ const ctx = canvas.getContext('2d');
 // and draws a 50x50 square from that point.
 // Draw 3 squares with that function.
 // Avoid code duplication.
-const arr = [[14, 569], [156, 638], [328, 93]];
-function drawSquare(coor) {
-  ctx.strokeRect(coor[0], coor[1], 50, 50);
+
+function drawSquare(x, y) {
+  ctx.strokeRect(x, y, 50, 50);
 }
 for (let i = 0; i < 3; i++) {
-  drawSquare(arr[i]);
+  drawSquare(Math.random() * 400, Math.random() * 400);
 }
