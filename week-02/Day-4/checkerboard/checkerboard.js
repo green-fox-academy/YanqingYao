@@ -26,4 +26,4 @@ function drawCheckerBoard(numRow, numColumn) {
   }
 }
 
-drawCheckerBoard(5, 5);
+drawCheckerBoard(10, 10);
