@@ -14,13 +14,13 @@ for (let i = 0; i < c1.length; i++) {
 column1.style.width = '80px';
 
 const column2 = document.createElement('div');
-column2.setAttribute('size', '4');
 document.body.appendChild(column2);
 const c2 = ['up', 'bigger', 'X', 'down'];
 for (let j = 0; j < c1.length; j++) {
   const y = document.createElement('button');
   y.textContent = c2[j];
   y.setAttribute('id', c2[j]);
+  y.style.width = '80px';
   column2.appendChild(y);
 }
 column2.style.width = '80px';
@@ -33,13 +33,15 @@ column3.style.width = '80px';
 
 const up = document.querySelector('#up');
 up.onclick = () => {
-  console.log(column1.value);
-  for (let i = 0; i < c1.length; i++) {
-    if (column1.value === c1[i]) {
-      column1.removeChild(document.getElementById(column1.value));
+  const arr = document.getElementsByTagName('option');
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++) {
+    if (column1.value === arr[i].textContent) {
       const option = document.createElement('option');
-      option.textContent = c1[i];
-      column1.insertBefore(option, document.getElementById(c1[i - 1]));
+      option.textContent = column1.value;
+      console.log(column1.value);
+      column1.insertBefore(option, document.getElementById(arr[i - 1].textContent));
+      column1.removeChild(document.getElementById(column1.value));
     }
   }
 };
