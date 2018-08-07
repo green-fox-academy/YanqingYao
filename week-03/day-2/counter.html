@@ -21,8 +21,9 @@
       // And display the result in the result element.
       const button = document.querySelector('button');
       const countItems = (e) => {
-        let Count = Math.Count(document.getElementsByTagName('li'));
-        console.log(count);
+        let count = document.getElementsByTagName('li').length;
+
+        document.querySelector('p').textContent = count;
 
       }
       button.addEventListener('click', countItems);
