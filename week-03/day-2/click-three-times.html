@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>delayed click</title>
+</head>
+
+<body>
+  <button>Up</button>
+
+  <script>
+    const btn = document.querySelector('button');
+    setTimeout(() => {
+      let count = 0;
+      const action = btn.addEventListener('click', () => {
+        count += 1;
+        if (count >= 3) {
+          const div = document.createElement('div');
+          div.textContent = '5 seconds elapsed and clicked 3 times';
+          document.body.appendChild(div);
+        }
+      })
+    }, 5000)
+
+
+  </script>
+</body>
+
+</html>

@@ -48,10 +48,20 @@
     // be your task!
     //  - the nav buttons (up, down, left, right) move the background by 10px
     const nav = document.querySelector('nav');
+
+
+    const img = document.querySelector('.img-inspector');
+
+    img.style.position = 'relative';
+    img.style.top = 0;
+    img.style.botton = 0;
+    img.style.left = 0;
+    img.style.right = 0;
+
     nav.addEventListener('click', (e) => {
       console.log(e.target.textContent);
-      if (e.target) {
-
+      if (e.target.textContent === 'Up') {
+        e.target.style.Top -= '10';
       }
     })
 

@@ -21,7 +21,7 @@
     }
 
     section div {
-      box-shadow: 0px 0px 10px #666 inset;
+      box-shadow: 0 0 10px #666 inset;
       text-align: center;
       line-height: 50px;
     }
@@ -65,9 +65,9 @@
           }
         }
         if (i <= j && i != 1) {
-          document.querySelectorAll('div')[i-1].className = 'prime';
+          document.querySelectorAll('div')[i - 1].className = 'prime';
         } else {
-          document.querySelectorAll('div')[i-1].className = 'not-prime';
+          document.querySelectorAll('div')[i - 1].className = 'not-prime';
         }
       }
 
