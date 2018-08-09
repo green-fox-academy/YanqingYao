@@ -19,9 +19,13 @@ const content = (responseObject) => {
 
   for (let i = 0; i < responseObject.response.docs.length; i++) {
     const ul = document.createElement('ul');
-    const li = document.createElement('li');
     ul.textContent = responseObject.response.docs[i].headline.main;
+    const l1 = document.createElement('li');
+    l1.textContent = responseObject.response.docs[i].snippet;
+    ul.appendChild(l1);
+    const l2 = document.createElement('li');
+    l2.textContent = responseObject.response.docs[i].pub_date;
+    ul.appendChild(l2);
     container.appendChild(ul);
   }
-
 };
