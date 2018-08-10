@@ -1,9 +1,9 @@
 const plus = document.querySelector('.plus');
 const minus = document.querySelector('.minus');
-const slidePic = document.getElementsByClassName('slide-pic');
+const slidePic = document.getElementsByClassName('pic-des');
 const smallContainer = document.querySelector('.small-container');
 const description = document.querySelector('.description');
-let slideIndex = 1;
+let slideIndex = 3;
 
 function showPic(n) {
   if (n > slidePic.length) {
