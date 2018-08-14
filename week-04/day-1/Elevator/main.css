@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.orange {
+  background-color: rgb(251, 78, 54);
+  width: 100vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flexVer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.white {
+  background-color: beige;
+height: 5vh;
+width: 25vh;
+border: 1px solid black;
+}
+button{
+  height: 5vh;
+  width: 20vh;
+  margin: 5px;
+}
