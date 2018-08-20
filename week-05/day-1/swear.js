@@ -9,7 +9,7 @@ function familyFriendlizer(original, toDelete) {
   const string = original.split(' ');
   console.log(string);
   string.forEach((element) => {
-    if (toDelete.match(/^element/g)) {
+    if (toDelete.includes(element.replace(/\./g, '').replace(/,/g, '').toLowerCase())) {
       result.removedWords += 1;
     } else {
       result.clearText += `${element} `;
@@ -20,7 +20,7 @@ function familyFriendlizer(original, toDelete) {
 
 const result = familyFriendlizer(content, offensiveWords);
 
-console.log(result);
+console.log(result.removedWords);
 
 // output
 // {
