@@ -7,7 +7,6 @@ function ajax(method, url, data, callback, correct, incorrect) {
   httpRequest.onload = () => {
     if (httpRequest.status === 200) {
       const response = JSON.parse(httpRequest.response);
-      console.log(response);
       callback(response);
     }
     if (httpRequest.readyState === XMLHttpRequest.DONE && (httpRequest.status === 204)) {
@@ -19,35 +18,39 @@ function ajax(method, url, data, callback, correct, incorrect) {
   };
 }
 
-const newText = (n) => {
-  if (response.text.includes('  ')) {
-    const string = response.text.replace(/\s\s/g, ' ');
-    newText(string);
-    return string;
+const newText = (original) => {
+  let result = '';
+  const string = original.text.split(' ');
+  for (let i = 0; i < (string.length - 1); i++) {
+    if (string[i] !== '') {
+      result += `${string[i]} `;
+    }
   }
+  result += string[string.length - 1];
+  return result;
 };
 
 document.querySelector('.get-text').onclick = () => {
   ajax('GET', '/text', null, (response) => {
-    console.log(response);
     const textContainer = document.querySelector('.text-area');
     textContainer.textContent = newText(response);
-    textContainer.setAttribute('value', newText);
     textContainer.setAttribute('id', response.id);
   }, null, null);
 };
 
 document.querySelector('.submit-result').onclick = () => {
   ajax('POST', '/text', {
-    id: document.querySelector('.text-area').id.value,
+    id: Number(document.querySelector('.text-area').id),
     text: document.querySelector('.text-area').value,
   }, null, () => {
     const statusBar = document.createElement('div');
     statusBar.textContent = 'OK';
+    statusBar.setAttribute('class', 'green');
     document.body.appendChild(statusBar);
   }, () => {
     const statusBar = document.createElement('div');
     statusBar.textContent = 'Wrong';
+    statusBar.setAttribute('class', 'red');
     document.body.appendChild(statusBar);
   });
 };

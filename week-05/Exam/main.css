@@ -21,3 +21,11 @@ form {
   height: 60%;
   word-break: break-all;
 }
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
