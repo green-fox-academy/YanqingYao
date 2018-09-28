@@ -4,7 +4,7 @@ function ajax(method, url, data, callback, correct, incorrect) {
   httpRequest.setRequestHeader('Content-Type', 'application/json');
   httpRequest.send(JSON.stringify(data));
 
-  httpRequest.onload = () => {
+  httpRequest.onload = () => { // called when an XMLHttpRequest transaction completes successfully
     if (httpRequest.status === 200) {
       const response = JSON.parse(httpRequest.response);
       callback(response);
@@ -46,11 +46,15 @@ document.querySelector('.submit-result').onclick = () => {
     const statusBar = document.createElement('div');
     statusBar.textContent = 'OK';
     statusBar.setAttribute('class', 'green');
+    statusBar.setAttribute('id', 'new');
     document.body.appendChild(statusBar);
+    // document.querySelector('#new').classList.add('hidden');
   }, () => {
     const statusBar = document.createElement('div');
     statusBar.textContent = 'Wrong';
     statusBar.setAttribute('class', 'red');
+    statusBar.setAttribute('id', 'new');
     document.body.appendChild(statusBar);
+    // document.querySelector('#new').claxssList.add('hidden');
   });
 };

@@ -6,8 +6,7 @@
 const powerN = (number, power) => {
   if (power < 1) {
     return 1;
-  } else {
-    return number *= powerN(number, power - 1);
   }
-}
+  return number *= powerN(number, power - 1);
+};
 console.log(powerN(3, 4));

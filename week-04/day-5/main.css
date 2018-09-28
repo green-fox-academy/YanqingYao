@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  background-color: rgb(234, 234, 234);
+}
+
+header {
+  height: 40vh;
+  position: relative;
+}
+
+.header-div {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eaebed;
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 100px;
+}
+
+.header-img {
+  height: 40vh;
+  width: 100vw;
+}
+
+.icon-img {
+  position: absolute;
+  width: 12vh;
+  top: 18%;
+  left: 3%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  background-color: rgb(234, 234, 234);
+}
+
+main {
+  flex-shrink: 1;
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+}
+
+.new-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgb(234, 234, 234);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  margin: 10px;
+}
+
+.title-content {
+  color: rgb(67, 67, 67);
+  font-size: 30px;
+  font-weight: 300px;
+}
+
+p {
+  color: rgb(142, 142, 142);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  padding-left: 35px;
+  margin: 0 30px 0 0;
+}
+
+.up {
+  background-image: url(upvote.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.vote-number {
+  font-size: 22px;
+  margin: 3px;
+  color: rgb(165, 165, 165);
+  font-weight: 900;
+}
+
+button:focus {
+  outline: none;
+}
+
+.down {
+  background-image: url(downvote.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+aside {
+  flex-shrink: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 400px;
+  margin: 20px;
+}
+
+.submit-button {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(60, 145, 215);
+  color: rgb(231, 231, 231);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.aside-div {
+  background-color: rgb(242,242,242);
+  height: 400px;
+  width: 100%;
+  margin: 20px;
+}
+
+.aside-title {
+  background-color: rgb(208, 208, 208);
+  color: rgb(67, 67, 67);
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.space-link {
+  color: rgb(40, 112, 184);
+  font-size: 17px;
+}
+
+.list-box {
+  padding-left: 25px;
+}
+
+.hidden {
+  z-index: -100;
+}
